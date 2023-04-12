@@ -1,0 +1,48 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+li {
+  font-size: 1.25rem;
+}
+
+.navBar {
+  background: steelblue;
+  box-shadow: 4px 2px 5px gray;
+  color: white;
+  padding: 10px;
+}
+
+.brand {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  color: gray;
+  text-shadow: 2px 2px 4px black;
+}
+
+.link:hover {
+  color: white;
+}
+
+.navbutton {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.brandnav {
+  text-shadow: 2px 2px 4px black;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.navbutton:hover {
+  background: #041e42;
+  color: #041e42;
+  cursor: pointer;
+}

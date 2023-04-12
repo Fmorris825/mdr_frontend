@@ -1,0 +1,24 @@
+img {
+  width: 350px;
+  height: 425px;
+  object-fit: cover;
+}
+
+.subheader {
+  font-weight: 800;
+  color: #041e42;
+  opacity: 80%;
+}
+
+.portrait {
+  box-shadow: 5px 5px 5px grey;
+  border: goldenrod solid 2px;
+}
+
+.contactInfo {
+  color: navy;
+}
+
+li {
+  list-style: circle;
+}

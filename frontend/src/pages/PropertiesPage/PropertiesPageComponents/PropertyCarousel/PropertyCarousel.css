@@ -1,0 +1,21 @@
+.carousel {
+  width: 900px;
+  border: 1px solid #041e42;
+  box-shadow: 6px 6px 5px grey;
+  margin: 40px;
+  border-radius: 4px;
+}
+
+.carouselitem {
+  height: 600px;
+  object-fit: cover;
+  border-radius: 4px;
+  opacity: 85%;
+}
+
+.carouseltext {
+  text-shadow: 2px 2px 4px whitesmoke;
+  color: #041e42;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 35px;
+}

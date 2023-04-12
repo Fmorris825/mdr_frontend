@@ -1,0 +1,74 @@
+.propertycards {
+  box-shadow: 7px 7px 5px lightgray;
+  width: 600px;
+  border: 1px solid lightgrey;
+  color: gray;
+  border-radius: 5px;
+  background-color: aliceblue;
+  height: 300px;
+}
+
+.propertycards:hover {
+  box-shadow: 10px 10px 5px grey;
+  background-color: #e0e0e0;
+  color: #041e42;
+  border: 2px solid #041e42;
+}
+
+.propertycards:hover .card-bottom-liner {
+  color: goldenrod;
+}
+
+.propertycards:hover strong {
+  color: black;
+}
+
+.cardimg {
+  width: 300px;
+  height: 200px;
+  border-radius: 3px;
+  border: 1px lightgray solid;
+  box-shadow: 6px 6px 5px darkgray;
+}
+
+.carddesc {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cardaddress {
+  font-size: 24px;
+}
+
+.cardinfo {
+  margin-left: 25px;
+}
+
+.propertyheader {
+  color: black;
+  margin-left: 70px;
+}
+
+.card-bottom-liner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  gap: 5px;
+  font-size: 15px;
+}
+
+.img-info {
+  margin: 10px;
+  margin-top: 20px;
+  height: 250px;
+}
+
+.card-bottom-liner b {
+  color: #041e42;
+}
+
+.propertyCardInfo {
+  padding-left: 40px;
+  gap: 20px;
+}
