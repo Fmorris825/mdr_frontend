@@ -8,6 +8,7 @@ import { Container } from "react-bootstrap";
 import PropertiesIFrame from "../../components/PropertiesIFrame/PropertiesIFrame";
 import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHeader";
 import Database from "../../Database";
+import { URL_HOST } from "../../../urlHost";
 
 const PropertiesPage = () => {
   const [properties, setProperties] = useState([]);
@@ -19,7 +20,7 @@ const PropertiesPage = () => {
   }, []);
 
   async function getProperties() {
-    const response = await axios.get("http://127.0.0.1:8000/api/properties/");
+    const response = await axios.get(`${URL_HOST}/api/properties/`);
     setProperties(response.data);
   }
 

@@ -10,6 +10,7 @@ import {
   FormLabel,
   Image,
 } from "react-bootstrap";
+import { URL_HOST } from "../../../../urlHost";
 
 const EditPropertyForm = ({
   selectedProperty,
@@ -42,7 +43,7 @@ const EditPropertyForm = ({
 
     try {
       let response = await axios.put(
-        `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/`,
+        `${URL_HOST}/api/properties/${selectedProperty.id}/`,
         editProperty,
         {
           headers: {

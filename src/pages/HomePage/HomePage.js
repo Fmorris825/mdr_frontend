@@ -7,6 +7,7 @@ import RealtorsContainer from "../RealtorsPage/RealtorsPageComponents/RealtorsCo
 import GoogleMapsContainer from "../../components/GoogleMapsContainer/GoogleMapsContainer";
 import PropertyCarousel from "../PropertiesPage/PropertiesPageComponents/PropertyCarousel/PropertyCarousel";
 import Banner from "./HomePageComponents/Banner/Banner";
+import { URL_HOST } from "../../../urlHost";
 
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
@@ -18,7 +19,7 @@ const HomePage = () => {
   useEffect(() => {
     const fetchCars = async () => {
       try {
-        let response = await axios.get("http://127.0.0.1:8000/api/cars/", {
+        let response = await axios.get(`${URL_HOST}/api/cars/`, {
           headers: {
             Authorization: "Bearer " + token,
           },

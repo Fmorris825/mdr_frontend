@@ -9,6 +9,7 @@ import {
   Form,
   Image,
 } from "react-bootstrap";
+import { URL_HOST } from "../../../../../urlHost";
 
 const AddPhotoForm = () => {
   const [photo_url, setPhoto_Url] = useState("");
@@ -24,7 +25,7 @@ const AddPhotoForm = () => {
 
     try {
       let response = await axios.post(
-        `http://127.0.0.1:8000/api/photos/${property_id}/`,
+        `${URL_HOST}/api/photos/${property_id}/`,
         newPhoto,
         {
           headers: {

@@ -9,6 +9,7 @@ import {
   Form,
   Image,
 } from "react-bootstrap";
+import { URL_HOST } from "../../../../urlHost";
 
 const AddPhotoBtn = ({
   selectedPhoto,
@@ -28,7 +29,7 @@ const AddPhotoBtn = ({
 
     try {
       let response = await axios.post(
-        `http://127.0.0.1:8000/api/photos/${selectedProperty.id}/`,
+        `${URL_HOST}/api/photos/${selectedProperty.id}/`,
         newPhoto,
         {
           headers: {

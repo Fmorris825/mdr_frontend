@@ -3,6 +3,7 @@ import axios from "axios";
 import { Form, Image, FormLabel, Modal } from "react-bootstrap";
 import "./DeleteProperty.css";
 import useAuth from "../../../hooks/useAuth";
+import { URL_HOST } from "../../../../urlHost";
 
 const DeletePropertyModal = ({
   showDelProp,
@@ -15,7 +16,7 @@ const DeletePropertyModal = ({
 
   async function deleteProperty() {
     let response = await axios.delete(
-      `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/`,
+      `${URL_HOST}/api/properties/${selectedProperty.id}/`,
       {
         headers: {
           Authorization: "Bearer " + token,

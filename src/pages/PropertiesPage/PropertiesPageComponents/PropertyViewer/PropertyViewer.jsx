@@ -7,6 +7,7 @@ import LargePhoto from "../LargePhoto/LargePhoto";
 import { Col, Container } from "react-bootstrap";
 import EditRender from "../../../../components/CRUDCompoents/EditRender/EditRender";
 import Database from "../../../../Database";
+import { URL_HOST } from "../../../../../urlHost";
 
 const PropertyViewer = ({
   selectedProperty,
@@ -26,7 +27,7 @@ const PropertyViewer = ({
 
   async function getPhotosForProperties() {
     const response = await axios.get(
-      `http://127.0.0.1:8000/api/properties/${selectedProperty.id}/photos/`
+      `${URL_HOST}/api/properties/${selectedProperty.id}/photos/`
     );
     setPhotos(response.data);
   }

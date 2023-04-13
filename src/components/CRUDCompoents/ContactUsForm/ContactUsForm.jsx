@@ -15,6 +15,7 @@ import CommentAlert from "../CommentAlert/CommentAlert";
 import MapsKey from "../../../MapsKey";
 import EmailValidatorStatement from "../../EmailValidatorStatement/EmailValidatorStatement";
 import "./ContactUsForm.css";
+import { URL_HOST } from "../../../../urlHost";
 
 const ContactUsForm = ({ handleCloseForm }) => {
   const [firstName, setFirstName] = useState("");
@@ -48,7 +49,7 @@ const ContactUsForm = ({ handleCloseForm }) => {
       inquiry: inquiry,
     };
     let response = await axios.post(
-      "http://127.0.0.1:8000/api/client_comments/",
+      `${URL_HOST}/api/client_comments/`,
       newInquiry
     );
     if (response.status === 201) {

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Form, Image, FormLabel, Modal } from "react-bootstrap";
 import axios from "axios";
 import useAuth from "../../../hooks/useAuth";
+import { URL_HOST } from "../../../../urlHost";
 
 const DeletePhotoModal = ({
   handleCloseDelPhoto,
@@ -14,7 +15,7 @@ const DeletePhotoModal = ({
 
   async function deletePhoto() {
     let response = await axios.delete(
-      `http://127.0.0.1:8000/api/photos/delete/${selectedPhoto.id}/`,
+      `${URL_HOST}/api/photos/delete/${selectedPhoto.id}/`,
       {
         headers: {
           Authorization: "Bearer " + token,
