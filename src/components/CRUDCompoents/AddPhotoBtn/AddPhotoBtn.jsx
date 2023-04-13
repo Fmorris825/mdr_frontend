@@ -9,7 +9,7 @@ import {
   Form,
   Image,
 } from "react-bootstrap";
-import { URL_HOST } from "../../../../urlHost";
+import { URL_HOST } from "../../../urlHost";
 
 const AddPhotoBtn = ({
   selectedPhoto,

@@ -10,7 +10,7 @@ import {
   FormLabel,
   Image,
 } from "react-bootstrap";
-import { URL_HOST } from "../../../../urlHost";
+import { URL_HOST } from "../../../urlHost";
 
 const EditPropertyForm = ({
   selectedProperty,

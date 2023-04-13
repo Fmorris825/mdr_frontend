@@ -9,8 +9,7 @@ import {
   Image,
   FormLabel,
 } from "react-bootstrap";
-import { URL_HOST } from "../../../../../urlHost";
-
+import { URL_HOST } from "../../../../urlHost";
 const AddPropertyForm = () => {
   const [photo_url, setPhoto_Url] = useState("");
   const [address, setAddress] = useState("");

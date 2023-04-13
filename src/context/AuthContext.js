@@ -2,8 +2,7 @@ import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import jwtDecode from "jwt-decode";
-import { URL_HOST } from "../../urlHost";
-
+import { URL_HOST } from "../urlHost";
 const AuthContext = createContext();
 
 export default AuthContext;
@@ -27,7 +26,6 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(setUserObject(decodedUser));
   const [isServerError, setIsServerError] = useState(false);
   const navigate = useNavigate();
-
   const registerUser = async (registerData) => {
     try {
       let finalData = {
@@ -37,13 +35,17 @@ export const AuthProvider = ({ children }) => {
         first_name: registerData.firstName,
         last_name: registerData.lastName,
       };
-      let response = await axios.post(`${BASE_URL}/register/`, finalData);
+      let response = await axios.post(
+        `http://mdrbackendcapstone-env.eba-tgn5xhjt.us-east-1.elasticbeanstalk.com/api/auth/register/`,
+        finalData
+      );
       if (response.status === 201) {
         console.log("Successful registration! Log in to access token");
         setIsServerError(false);
         navigate("/login");
       } else {
         navigate("/register");
+        console.log("hello");
       }
     } catch (error) {
       console.log(error.response.data);
@@ -65,8 +67,6 @@ export const AuthProvider = ({ children }) => {
       }
     } catch (error) {
       console.log(error.response.data);
-      setIsServerError(true);
-      navigate("/register");
     }
   };
 

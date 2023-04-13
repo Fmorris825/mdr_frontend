@@ -7,8 +7,7 @@ import LargePhoto from "../LargePhoto/LargePhoto";
 import { Col, Container } from "react-bootstrap";
 import EditRender from "../../../../components/CRUDCompoents/EditRender/EditRender";
 import Database from "../../../../Database";
-import { URL_HOST } from "../../../../../urlHost";
-
+import { URL_HOST } from "../../../../urlHost";
 const PropertyViewer = ({
   selectedProperty,
   selectedPhoto,

@@ -7,8 +7,7 @@ import RealtorsContainer from "../RealtorsPage/RealtorsPageComponents/RealtorsCo
 import GoogleMapsContainer from "../../components/GoogleMapsContainer/GoogleMapsContainer";
 import PropertyCarousel from "../PropertiesPage/PropertiesPageComponents/PropertyCarousel/PropertyCarousel";
 import Banner from "./HomePageComponents/Banner/Banner";
-import { URL_HOST } from "../../../urlHost";
-
+import { URL_HOST } from "../../urlHost";
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)
   // The "token" value is the JWT token that you will send in the header of any request requiring authentication
@@ -31,6 +30,7 @@ const HomePage = () => {
     };
     fetchCars();
   }, [token]);
+
   return (
     <div>
       <Banner />

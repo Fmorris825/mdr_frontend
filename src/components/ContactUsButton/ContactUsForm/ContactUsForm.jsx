@@ -17,7 +17,7 @@ import EmailValidator from "../../ValidatorComponents/EmailValidator/EmailValida
 import FirstNameValidator from "../../ValidatorComponents/FirstNameValidator/FirstNameValidator";
 import LastNameValidator from "../../ValidatorComponents/LastNameValidator/LastNameValidator";
 import InquiryValidator from "../../ValidatorComponents/InquiryValidator/InquiryValidator";
-import { URL_HOST } from "../../../../urlHost";
+import { URL_HOST } from "../../../urlHost";
 
 const ContactUsForm = ({ handleCloseForm }) => {
   const [firstName, setFirstName] = useState("");

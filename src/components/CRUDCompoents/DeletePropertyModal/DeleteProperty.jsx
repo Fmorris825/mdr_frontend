@@ -3,7 +3,7 @@ import axios from "axios";
 import { Form, Image, FormLabel, Modal } from "react-bootstrap";
 import "./DeleteProperty.css";
 import useAuth from "../../../hooks/useAuth";
-import { URL_HOST } from "../../../../urlHost";
+import { URL_HOST } from "../../../urlHost";
 
 const DeletePropertyModal = ({
   showDelProp,

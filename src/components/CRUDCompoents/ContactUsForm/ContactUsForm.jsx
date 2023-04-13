@@ -15,7 +15,7 @@ import CommentAlert from "../CommentAlert/CommentAlert";
 import MapsKey from "../../../MapsKey";
 import EmailValidatorStatement from "../../EmailValidatorStatement/EmailValidatorStatement";
 import "./ContactUsForm.css";
-import { URL_HOST } from "../../../../urlHost";
+import { URL_HOST } from "../../../urlHost";
 
 const ContactUsForm = ({ handleCloseForm }) => {
   const [firstName, setFirstName] = useState("");

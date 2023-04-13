@@ -8,8 +8,7 @@ import { Container } from "react-bootstrap";
 import PropertiesIFrame from "../../components/PropertiesIFrame/PropertiesIFrame";
 import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHeader";
 import Database from "../../Database";
-import { URL_HOST } from "../../../urlHost";
-
+import { URL_HOST } from "../../urlHost";
 const PropertiesPage = () => {
   const [properties, setProperties] = useState([]);
   const [selectedProperty, setSelectedProperty] = useState(false);
@@ -20,10 +19,13 @@ const PropertiesPage = () => {
   }, []);
 
   async function getProperties() {
-    const response = await axios.get(`${URL_HOST}/api/properties/`);
-    setProperties(response.data);
+    try {
+      const response = await axios.get(`${URL_HOST}/api/properties/`);
+      setProperties(response.data);
+    } catch (error) {
+      console.log(error.response.data);
+    }
   }
-
   console.log(properties);
   return selectedProperty ? (
     <div>

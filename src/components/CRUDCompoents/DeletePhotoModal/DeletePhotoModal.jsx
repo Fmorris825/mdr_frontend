@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Image, FormLabel, Modal } from "react-bootstrap";
 import axios from "axios";
 import useAuth from "../../../hooks/useAuth";
-import { URL_HOST } from "../../../../urlHost";
+import { URL_HOST } from "../../../urlHost";
 
 const DeletePhotoModal = ({
   handleCloseDelPhoto,
