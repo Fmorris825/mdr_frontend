@@ -18,14 +18,31 @@ const PropertiesPage = () => {
     getProperties();
   }, []);
 
+  // async function getProperties() {
+  //   try {
+  //     const response = await axios.get(`${URL_HOST}/api/properties/`);
+  //     setProperties(response.data);
+  //   } catch (error) {
+  //     console.log(error.response.data);
+  //   }
+  // }
+
   async function getProperties() {
     try {
-      const response = await axios.get(`${URL_HOST}/api/properties/`);
+      const config = {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
+          "Access-Control-Allow-Headers": "Content-Type",
+        },
+      };
+      const response = await axios.get(`${URL_HOST}/api/properties/`, config);
       setProperties(response.data);
     } catch (error) {
       console.log(error.response.data);
     }
   }
+
   console.log(properties);
   return selectedProperty ? (
     <div>
