@@ -21,7 +21,7 @@ const PropertiesPage = () => {
   async function getProperties() {
     try {
       const response = await axios.get(
-        `https://www.morrisdeltarealty.com/api/properties/`
+        `http://mdrbackendcapstone-env.eba-tgn5xhjt.us-east-1.elasticbeanstalk.com/api/properties/`
       );
       setProperties(response.data);
     } catch (error) {
