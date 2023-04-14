@@ -6,6 +6,7 @@ import CarouselItem from "react-bootstrap/esm/CarouselItem";
 import PropertySlide from "../PropertySlide/PropertySlide";
 import "./PropertyCarousel.css";
 import Database from "../../../../Database";
+import { Col } from "react-bootstrap";
 
 const PropertyCarousel = () => {
   const [properties, setProperties] = useState([]);

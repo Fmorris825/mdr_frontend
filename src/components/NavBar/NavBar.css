@@ -9,7 +9,6 @@ li {
 }
 
 .navBar {
-  background: steelblue;
   box-shadow: 4px 2px 5px gray;
   color: white;
   padding: 10px;
@@ -39,6 +38,8 @@ li {
   text-shadow: 2px 2px 4px black;
   font-weight: 500;
   font-size: 40px;
+  letter-spacing: 2px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 
 .navbutton:hover {

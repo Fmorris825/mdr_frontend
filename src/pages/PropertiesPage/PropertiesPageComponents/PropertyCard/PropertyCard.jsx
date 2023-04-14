@@ -17,7 +17,7 @@ const PropertyCard = ({ property, setSelectedProperty, setSelectedPhoto }) => {
           />
           <div className="cardinfo d-flex flex-column">
             <h3 className="cardaddress">{property.address}</h3>
-            <h3>${property.listing_price}</h3>
+            <h3 className="cardaddress">${property.listing_price}</h3>
             <h3 className="cardaddress">{property.city}</h3>
             <p className="carddesc">{property.description}</p>
           </div>

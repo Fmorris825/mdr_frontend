@@ -6,4 +6,4 @@
 // https://cors-everywhere-me.herokuapp.com
 
 export const URL_HOST =
-  "https://mdrbackendcapstone-env.eba-tgn5xhjt.us-east-1.elasticbeanstalk.com";
+  "http://mdrbackendcapstone-env.eba-tgn5xhjt.us-east-1.elasticbeanstalk.com";

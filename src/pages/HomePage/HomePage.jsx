@@ -3,10 +3,9 @@ import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 
 import axios from "axios";
-import RealtorsContainer from "../RealtorsPage/RealtorsPageComponents/RealtorsContainer/RealtorsContainer";
-import GoogleMapsContainer from "../../components/GoogleMapsContainer/GoogleMapsContainer";
-import PropertyCarousel from "../PropertiesPage/PropertiesPageComponents/PropertyCarousel/PropertyCarousel";
 import Banner from "./HomePageComponents/Banner/Banner";
+import banner from "./HomePageComponents/Banner/banner1.png";
+import { Image } from "react-bootstrap";
 import { URL_HOST } from "../../urlHost";
 const HomePage = () => {
   // The "user" value from this Hook contains the decoded logged in user information (username, first name, id)

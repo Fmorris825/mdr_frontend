@@ -1,9 +1,9 @@
 .propertycards {
   box-shadow: 7px 7px 5px lightgray;
-  width: 600px;
+  width: 500px;
   border: 1px solid lightgrey;
   color: gray;
-  border-radius: 5px;
+  border-radius: 2px;
   background-color: aliceblue;
   height: 300px;
 }
@@ -32,21 +32,16 @@
 }
 
 .carddesc {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 10px;
 }
 
 .cardaddress {
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .cardinfo {
-  margin-left: 25px;
-}
-
-.propertyheader {
-  color: black;
-  margin-left: 70px;
+  margin-left: 18px;
 }
 
 .card-bottom-liner {
@@ -55,7 +50,7 @@
   align-items: center;
   margin: 15px;
   gap: 5px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .img-info {

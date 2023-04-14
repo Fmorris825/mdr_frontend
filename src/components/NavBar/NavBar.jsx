@@ -67,19 +67,23 @@ const NavBar = () => {
         </Nav>
         <ContactUsButton />
         <Nav>
-          {user ? (
-            <div>
-              <button className="navbutton" onClick={logoutUser}>
-                Logout
-              </button>
-              <button className="navbutton" onClick={() => navigate("/admin")}>
-                Admin
-              </button>
-            </div>
-          ) : null
-          // <button className="navbutton" onClick={() => navigate("/login")}>
-          //   Login
-          // </button>
+          {
+            user ? (
+              <div>
+                <button className="navbutton" onClick={logoutUser}>
+                  Logout
+                </button>
+                <button
+                  className="navbutton"
+                  onClick={() => navigate("/admin")}
+                >
+                  Admin
+                </button>
+              </div>
+            ) : null
+            // <button className="navbutton" onClick={() => navigate("/login")}>
+            //   Login
+            // </button>
           }
         </Nav>
       </NavbarCollapse>

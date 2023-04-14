@@ -4,7 +4,7 @@ import axios from "axios";
 import "./PropertiesPage.css";
 import PropertyList from "./PropertiesPageComponents/PropertyList/PropertyList";
 import PropertyViewer from "./PropertiesPageComponents/PropertyViewer/PropertyViewer";
-import { Container } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import PropertiesIFrame from "../../components/PropertiesIFrame/PropertiesIFrame";
 import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHeader";
 import Database from "../../Database";
@@ -20,7 +20,9 @@ const PropertiesPage = () => {
 
   async function getProperties() {
     try {
-      const response = await axios.get(`${URL_HOST}/api/properties/`);
+      const response = await axios.get(
+        `https://www.morrisdeltarealty.com/api/properties/`
+      );
       setProperties(response.data);
     } catch (error) {
       console.log(error.response.data);
@@ -30,7 +32,7 @@ const PropertiesPage = () => {
   return selectedProperty ? (
     <div>
       <MorrisDeltaHeader />
-      <div className="d-flex flex-column align-items-center">
+      <div className="d-flex flex-column align-items-center bodyBackground">
         <PropertyViewer
           selectedProperty={selectedProperty}
           setSelectedPhoto={setSelectedPhoto}
@@ -48,12 +50,18 @@ const PropertiesPage = () => {
   ) : (
     <div>
       <MorrisDeltaHeader />
-      <PropertyCarousel />
-      <PropertyList
-        properties={properties}
-        setSelectedProperty={setSelectedProperty}
-        setSelectedPhoto={setSelectedPhoto}
-      />
+      <Row className="bodyBackground">
+        <Col>
+          <PropertyCarousel />
+        </Col>
+        <Col>
+          <PropertyList
+            properties={properties}
+            setSelectedProperty={setSelectedProperty}
+            setSelectedPhoto={setSelectedPhoto}
+          />
+        </Col>
+      </Row>
     </div>
   );
 };
