@@ -20,7 +20,9 @@ const PropertiesPage = () => {
 
   async function getProperties() {
     try {
-      const response = await axios.get(`${URL_HOST}/api/properties/`);
+      const response = await axios.get(
+        `https://mdrbackendcapstone-env.eba-tgn5xhjt.us-east-1.elasticbeanstalk.com/api/properties/`
+      );
       setProperties(response.data);
     } catch (error) {
       console.log(error.response.data);
