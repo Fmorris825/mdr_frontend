@@ -1,11 +1,11 @@
 .propertycards {
   box-shadow: 7px 7px 5px lightgray;
-  width: 500px;
+  width: fit-content;
   border: 1px solid lightgrey;
   color: gray;
   border-radius: 2px;
   background-color: aliceblue;
-  height: 300px;
+  height: fit-content;
 }
 
 .propertycards:hover {
@@ -33,7 +33,6 @@
 
 .carddesc {
   font-size: 14px;
-  margin-top: 10px;
 }
 
 .cardaddress {
@@ -42,21 +41,22 @@
 
 .cardinfo {
   margin-left: 18px;
+  height: fit-content;
 }
 
 .card-bottom-liner {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 15px;
+  margin: 5px;
   gap: 5px;
   font-size: 14px;
 }
 
 .img-info {
-  margin: 10px;
-  margin-top: 20px;
-  height: 250px;
+  margin: 10px 10px 0px 10px;
+  margin-top: 10px;
+  height: fit-content;
 }
 
 .card-bottom-liner b {

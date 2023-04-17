@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import AuthContext from "../../context/AuthContext";
 import useCustomForm from "../../hooks/useCustomForm";
+import { Form, FormControl, FormLabel } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./LoginPage.css";
 
@@ -20,31 +21,33 @@ const LoginPage = () => {
 
   return (
     <div className="container">
-      <form className="form" onSubmit={handleSubmit}>
-        <label>
+      <Form className="form" onSubmit={handleSubmit}>
+        <FormLabel>
           Username:{" "}
-          <input
+          <FormControl
             type="text"
             name="username"
+            placeholder="Enter Username"
             value={formData.username}
             onChange={handleInputChange}
           />
-        </label>
-        <label>
+        </FormLabel>
+        <FormLabel>
           Password:{" "}
-          <input
-            type="text"
+          <FormControl
+            type="password"
             name="password"
+            placeholder="Password"
             value={formData.password}
             onChange={handleInputChange}
           />
-        </label>
+        </FormLabel>
         {isServerError ? (
           <p className="error">Login failed, incorrect credentials!</p>
         ) : null}
-        <Link to="/register">Click to register!</Link>
+        {/* <Link to="/register">Click to register!</Link> */}
         <button>Login!</button>
-      </form>
+      </Form>
     </div>
   );
 };

@@ -65,10 +65,10 @@ const PropertiesPage = () => {
     <div>
       <MorrisDeltaHeader />
       <Row className="bodyBackground">
-        <Col>
+        <Col sm={5}>
           <PropertyCarousel />
         </Col>
-        <Col>
+        <Col sm={7}>
           <PropertyList
             properties={properties}
             setSelectedProperty={setSelectedProperty}
