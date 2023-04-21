@@ -5,6 +5,7 @@ import GoogleMapsContainer from "../../components/GoogleMapsContainer/GoogleMaps
 import MapIFrameCopy from "../../components/MapIFrame/MapIFrame_copy";
 import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHeader";
 import Database from "../../Database";
+import { URL_HOST } from "../../urlHost";
 
 const MapsAndNeighborsHoods = () => {
   const [properties, setProperties] = useState([]);
@@ -15,10 +16,14 @@ const MapsAndNeighborsHoods = () => {
     setProperties(Database.properties);
   }, []);
 
-  // async function getProperties() {
-  //   const response = await axios.get("http://127.0.0.1:8000/api/properties/");
-  //   setProperties(response.data);
-  // }
+  async function getProperties() {
+    try {
+      const response = await axios.get(`${URL_HOST}/api/properties/`);
+      setProperties(response.data);
+    } catch (error) {
+      console.log(error.response.data);
+    }
+  }
 
   return selectedProperty ? (
     <div>

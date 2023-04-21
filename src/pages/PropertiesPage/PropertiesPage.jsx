@@ -66,7 +66,7 @@ const PropertiesPage = () => {
       <MorrisDeltaHeader />
       <Row className="bodyBackground">
         <Col sm={5}>
-          <PropertyCarousel />
+          <PropertyCarousel properties={properties} />
         </Col>
         <Col sm={7}>
           <PropertyList

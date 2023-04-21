@@ -8,12 +8,12 @@ import "./PropertyCarousel.css";
 import Database from "../../../../Database";
 import { Col } from "react-bootstrap";
 
-const PropertyCarousel = () => {
-  const [properties, setProperties] = useState([]);
+const PropertyCarousel = ({ properties }) => {
+  // const [properties, setProperties] = useState([]);
 
-  useEffect(() => {
-    setProperties(Database.properties);
-  }, []);
+  // useEffect(() => {
+  //   setProperties(Database.properties);
+  // }, []);
 
   // async function getProperties() {
   //   const response = await axios.get("http://127.0.0.1:8000/api/properties/");
