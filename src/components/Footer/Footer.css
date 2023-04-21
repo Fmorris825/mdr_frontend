@@ -24,8 +24,6 @@
 }
 
 .navBar {
-  background: steelblue;
-  box-shadow: 4px 2px 5px gray;
   color: white;
   width: 100%;
   display: flex;
