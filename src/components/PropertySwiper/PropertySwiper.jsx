@@ -5,29 +5,36 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 import "./PropertySwiper.css";
 
 // import required modules
 import { Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Image } from "react-bootstrap";
+import SwiperCard from "./SwiperCard";
 
-const PropertySwiper = ({ properties }) => {
+const PropertySwiper = ({ properties, handleSelection }) => {
   return (
     <>
       <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
+        slidesPerView={4}
+        spaceBetween={20}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        navigation={true}
+        modules={[Navigation, Pagination]}
         className="mySwiper"
       >
         {properties.map((property) => {
           return (
             <SwiperSlide>
-              <Image src={property.photo_url} />
+              <SwiperCard
+                property={property}
+                handleSelection={handleSelection}
+              />
             </SwiperSlide>
           );
         })}

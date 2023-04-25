@@ -6,6 +6,7 @@ const PropertyList = ({
   properties,
   setSelectedProperty,
   setSelectedPhoto,
+  handleSelection,
 }) => {
   return (
     <Row className="d-flex justify-content-center">
@@ -19,6 +20,7 @@ const PropertyList = ({
             property={property}
             setSelectedProperty={setSelectedProperty}
             setSelectedPhoto={setSelectedPhoto}
+            handleSelection={handleSelection}
           />
         );
       })}

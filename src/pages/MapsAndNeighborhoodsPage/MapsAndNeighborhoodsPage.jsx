@@ -7,13 +7,13 @@ import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHea
 import Database from "../../Database";
 import { URL_HOST } from "../../urlHost";
 
-const MapsAndNeighborsHoods = () => {
+const MapsAndNeighborsHoods = ({ handleSelection }) => {
   const [properties, setProperties] = useState([]);
   const [selectedProperty, setSelectedProperty] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(false);
 
   useEffect(() => {
-    setProperties(Database.properties);
+    getProperties(properties);
   }, []);
 
   async function getProperties() {
@@ -36,6 +36,7 @@ const MapsAndNeighborsHoods = () => {
         properties={properties}
         setSelectedProperty={setSelectedProperty}
         setSelectedPhoto={setSelectedPhoto}
+        handleSelection={handleSelection}
       />
     </div>
   ) : (
@@ -46,6 +47,7 @@ const MapsAndNeighborsHoods = () => {
         properties={properties}
         setSelectedProperty={setSelectedProperty}
         setSelectedPhoto={setSelectedPhoto}
+        handleSelection={handleSelection}
       />
     </div>
   );

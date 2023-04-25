@@ -9,10 +9,14 @@ import PropertiesIFrame from "../../components/PropertiesIFrame/PropertiesIFrame
 import MorrisDeltaHeader from "../../components/MorrisDeltaHeader/MorrisDeltaHeader";
 import Database from "../../Database";
 import { URL_HOST } from "../../urlHost";
-const PropertiesPage = () => {
+const PropertiesPage = ({
+  selectedProperty,
+  selectedPhoto,
+  setSelectedPhoto,
+  setSelectedProperty,
+  handleSelection,
+}) => {
   const [properties, setProperties] = useState([]);
-  const [selectedProperty, setSelectedProperty] = useState(false);
-  const [selectedPhoto, setSelectedPhoto] = useState(false);
 
   useEffect(() => {
     getProperties();
@@ -41,7 +45,7 @@ const PropertiesPage = () => {
   //     console.log(error.response.data);
   //   }
   // }
-
+  console.log(selectedProperty);
   console.log(properties);
   return selectedProperty ? (
     <div>
@@ -52,12 +56,14 @@ const PropertiesPage = () => {
           setSelectedPhoto={setSelectedPhoto}
           selectedPhoto={selectedPhoto}
           getProperties={getProperties}
+          handleSelection={handleSelection}
         />
 
         <PropertyList
           properties={properties}
           setSelectedProperty={setSelectedProperty}
           setSelectedPhoto={setSelectedPhoto}
+          handleSelection={handleSelection}
         />
       </div>
     </div>
@@ -73,6 +79,7 @@ const PropertiesPage = () => {
             properties={properties}
             setSelectedProperty={setSelectedProperty}
             setSelectedPhoto={setSelectedPhoto}
+            handleSelection={handleSelection}
           />
         </Col>
       </Row>

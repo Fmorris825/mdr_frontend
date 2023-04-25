@@ -1,19 +1,22 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 
-const PropertyCard = ({ property, setSelectedProperty, setSelectedPhoto }) => {
-  function handleSelection() {
-    setSelectedProperty(property);
-    setSelectedPhoto(false);
-  }
-
+const PropertyCard = ({
+  property,
+  setSelectedProperty,
+  setSelectedPhoto,
+  handleSelection,
+}) => {
   return (
-    <div className="d-flex m-2 propertycards" onClick={handleSelection}>
+    <div
+      className="d-flex m-2 propertycards"
+      onClick={(event) => handleSelection(property)}
+    >
       <div className="d-flex flex-column">
         <div className="card-bottom-liner">
           <b>{property.address}</b> <strong>|</strong>
-          <b>${property.listing_price}</b> <strong>|</strong>{" "}
-          <b>{property.city}</b>
+          <b>${property.listing_price.toLocaleString("en-US")}</b>{" "}
+          <strong>|</strong> <b>{property.city}</b>
         </div>
         <div className="d-flex justify-content-center img-info">
           <img
