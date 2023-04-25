@@ -13,6 +13,8 @@ const PropertyViewer = ({
   selectedPhoto,
   setSelectedPhoto,
   getProperties,
+  setScrollPhotoSelected,
+  scrollPhotoSelected,
 }) => {
   const [photos, setPhotos] = useState(false);
 
@@ -30,7 +32,7 @@ const PropertyViewer = ({
     );
     setPhotos(response.data);
   }
-
+  console.log(selectedPhoto);
   return photos ? (
     <div className="d-flex align-items-center propertyViewer">
       <div className="d-flex flex-column m-1 thumbnailContainer">
@@ -38,12 +40,19 @@ const PropertyViewer = ({
           return (
             <ImageCardViewer
               photo={photo}
+              selectedPhoto={selectedPhoto}
               setSelectedPhoto={setSelectedPhoto}
+              setScrollPhotoSelected={setScrollPhotoSelected}
+              selectedProperty={selectedProperty}
             />
           );
         })}
       </div>
-      <LargePhoto selectedPhoto={selectedPhoto} show={selectedPhoto} />
+      <LargePhoto
+        selectedPhoto={selectedPhoto}
+        show={scrollPhotoSelected}
+        selectedProperty={selectedProperty}
+      />
       <div className="propertyCardInfo">
         <div className="d-flex">
           <h4>{selectedProperty.address}</h4>

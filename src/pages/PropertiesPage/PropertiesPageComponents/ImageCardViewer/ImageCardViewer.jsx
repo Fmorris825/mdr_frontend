@@ -1,9 +1,15 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 
-const ImageCardViewer = ({ photo, setSelectedPhoto }) => {
+const ImageCardViewer = ({
+  photo,
+  setSelectedPhoto,
+  setScrollPhotoSelected,
+  selectedProperty,
+}) => {
   function handleSelection() {
-    setSelectedPhoto(photo);
+    // setSelectedPhoto(selectedProperty.photo_url);
+    setScrollPhotoSelected(photo);
   }
   return (
     <Image

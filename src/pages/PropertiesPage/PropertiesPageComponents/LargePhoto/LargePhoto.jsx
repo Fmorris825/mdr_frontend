@@ -2,14 +2,16 @@ import React from "react";
 import { Image } from "react-bootstrap";
 import "./LargePhoto.css";
 
-const LargePhoto = ({ selectedPhoto, show }) => {
+const LargePhoto = ({ selectedPhoto, show, selectedProperty }) => {
+  console.log(show);
+  console.log(selectedPhoto);
   return show ? (
     <div>
-      <Image className="largePhoto" src={selectedPhoto.photo_url} />
+      <Image className="largePhoto" src={show.photo_url} />
     </div>
   ) : (
-    <div className="largePlaceHolderText">
-      <h3>Select Photo from the left the see more of this great property.</h3>{" "}
+    <div>
+      <Image className="largePhoto" src={selectedProperty.photo_url} />
     </div>
   );
 };

@@ -24,11 +24,15 @@ import MapsAndNeighborsHoods from "./pages/MapsAndNeighborhoodsPage/MapsAndNeigh
 function App() {
   const [selectedProperty, setSelectedProperty] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(false);
+  const [scrollPhotoSelected, setScrollPhotoSelected] = useState(false);
 
   function handleSelection(property) {
+    console.log(property);
     setSelectedProperty(property);
-    setSelectedPhoto(false);
+    setScrollPhotoSelected(false);
+    setSelectedPhoto(property.photo_url);
   }
+
   return (
     <div>
       <Navbar />
@@ -63,6 +67,8 @@ function App() {
               selectedPhoto={selectedPhoto}
               setSelectedProperty={setSelectedProperty}
               handleSelection={handleSelection}
+              scrollPhotoSelected={scrollPhotoSelected}
+              setScrollPhotoSelected={setScrollPhotoSelected}
             />
           }
         />

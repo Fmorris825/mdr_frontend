@@ -15,11 +15,14 @@ const PropertiesPage = ({
   setSelectedPhoto,
   setSelectedProperty,
   handleSelection,
+  setScrollPhotoSelected,
+  scrollPhotoSelected,
 }) => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
     getProperties();
+    console.log(selectedProperty, selectedPhoto);
   }, []);
 
   async function getProperties() {
@@ -46,7 +49,6 @@ const PropertiesPage = ({
   //   }
   // }
   console.log(selectedProperty);
-  console.log(properties);
   return selectedProperty ? (
     <div>
       <MorrisDeltaHeader />
@@ -57,6 +59,8 @@ const PropertiesPage = ({
           selectedPhoto={selectedPhoto}
           getProperties={getProperties}
           handleSelection={handleSelection}
+          setScrollPhotoSelected={setScrollPhotoSelected}
+          scrollPhotoSelected={scrollPhotoSelected}
         />
 
         <PropertyList
