@@ -16,7 +16,7 @@ const RealtorCardSophia = () => {
         </Col>
         <Col>
           <div>
-            <h4>Sophia Morris</h4>
+            <h4>Dawn Morris</h4>
             <p className="subheader">Expertise: Residential Specialist </p>
           </div>
 
@@ -49,16 +49,16 @@ const RealtorCardSophia = () => {
               <div>
                 <b>Email:</b>{" "}
                 <span className="contactInfo">
-                  <a href="mailto:SophiaM@MorrisDeltaRealy.com?subject=Hello from Morris Delta Realty!&body=What Property will you ne inquiring about today? or What questions can we help you find soluions for? Please Enter the Property Reference Number above if you are inquiring about a specfic listing on our site.">
-                    SophiaM@MorrisDeltaRealy.com
+                  <a href="mailto:DawnM@MorrisDeltaRealy.com?subject=Hello from Morris Delta Realty!&body=What Property will you ne inquiring about today? or What questions can we help you find soluions for? Please Enter the Property Reference Number above if you are inquiring about a specfic listing on our site.">
+                    DawnM@MorrisDeltaRealy.com
                   </a>
                 </span>
               </div>
               <div>
                 {" "}
-                <b>#:</b> <span className="contactInfo">(469) 457-7897</span>{" "}
+                <b>#:</b> <span className="contactInfo">(469) 111-1111</span>{" "}
                 <b>| Fax:</b>{" "}
-                <span className="contactInfo">(469) 366-4578</span>
+                <span className="contactInfo">(469) 111-1111</span>
               </div>
             </div>
           </div>

@@ -52,7 +52,7 @@ const PropertiesPage = ({
   return selectedProperty ? (
     <div>
       <MorrisDeltaHeader />
-      <div className="d-flex flex-column align-items-center bodyBackground">
+      <div className="d-flex flex-column align-items-center">
         <PropertyViewer
           selectedProperty={selectedProperty}
           setSelectedPhoto={setSelectedPhoto}
@@ -74,7 +74,7 @@ const PropertiesPage = ({
   ) : (
     <div>
       <MorrisDeltaHeader />
-      <Row className="bodyBackground">
+      <Row className="">
         <Col sm={5}>
           <PropertyCarousel properties={properties} />
         </Col>

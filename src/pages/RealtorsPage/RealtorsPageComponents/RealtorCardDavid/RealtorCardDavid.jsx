@@ -10,7 +10,7 @@ const RealtorCardDavid = () => {
       <Row className="p-3 m-3">
         <Col>
           <div>
-            <h4>David Vernon</h4>
+            <h4>Jack Vernon</h4>
             <p className="subheader">Expertise: Commercial Specialist </p>
           </div>
           <p>
@@ -42,16 +42,16 @@ const RealtorCardDavid = () => {
                 <b>Email:</b>{" "}
                 <span className="contactInfo">
                   {" "}
-                  <a href="mailto:DavidV@MorrisDeltaRealy.com?subject=Hello from Morris Delta Realty!&body=What Property will you ne inquiring about today? or What questions can we help you find soluions for? Please Enter the Property Reference Number above if you are inquiring about a specfic listing on our site.">
-                    DavidV@MorrisDeltaRealy.com
+                  <a href="mailto:JackV@MorrisDeltaRealy.com?subject=Hello from Morris Delta Realty!&body=What Property will you ne inquiring about today? or What questions can we help you find soluions for? Please Enter the Property Reference Number above if you are inquiring about a specfic listing on our site.">
+                    JackV@MorrisDeltaRealy.com
                   </a>
                 </span>
               </div>
               <div>
                 {" "}
-                <b>#:</b> <span className="contactInfo">(469) 858-8989</span>{" "}
+                <b>#:</b> <span className="contactInfo">(469) 111-1111</span>{" "}
                 <b>| Fax:</b>{" "}
-                <span className="contactInfo">(469) 787-7878</span>
+                <span className="contactInfo">(469) 111-1111</span>
               </div>
             </div>
           </div>

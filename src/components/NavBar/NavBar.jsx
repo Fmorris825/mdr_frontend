@@ -12,6 +12,8 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 
 import "./NavBar.css";
 import ContactUsButton from "../ContactUsButton/ContactUsButton";
+import ContactNumberButton from "../ContactNumberButton/ContactNumberButton";
+import EmailLink from "../EmailLink/EmailLink";
 
 const NavBar = () => {
   const { logoutUser, user } = useContext(AuthContext);
@@ -65,6 +67,9 @@ const NavBar = () => {
             </Link>
           </Nav.Link>
         </Nav>
+        <EmailLink />
+        <ContactNumberButton />
+
         <ContactUsButton />
         <Nav>
           {
