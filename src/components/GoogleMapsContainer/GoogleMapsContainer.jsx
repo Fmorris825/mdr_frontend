@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import MapIFrameCopy from "../MapIFrame/MapIFrame_copy";
+// import MapIFrameCopy from "../MapIFrame/MapIFrame_copy";
 import PropertiesIFrame from "../PropertiesIFrame/PropertiesIFrame";
 
 const GoogleMapsContainer = ({ selectedProperty, setSelectedProperty }) => {
@@ -19,11 +19,11 @@ const GoogleMapsContainer = ({ selectedProperty, setSelectedProperty }) => {
         </ul>
       </div>
       <div className="d-flex justify-content-center">
-        <PropertiesIFrame
+        {/* <PropertiesIFrame
           selectedProperty={selectedProperty}
           setSelectedProperty={setSelectedProperty}
           className="m-3"
-        />
+        /> */}
       </div>
     </div>
   );

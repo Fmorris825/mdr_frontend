@@ -57,11 +57,11 @@ const Map = ({ selectedProperty }) => {
     let place = searchBox.getPlaces();
     let placeArray = place["0"].geometry;
     setCenter({
-      lat: placeArray.viewport.Wa.hi,
-      lng: placeArray.viewport.Ia.hi,
+      lat: placeArray.viewport.Ua.hi,
+      lng: placeArray.viewport.Ga.hi,
     });
   };
-  console.log(selectedProperty);
+
   if (!isLoaded) return <div>Loading...</div>;
   return (
     <div className="map">

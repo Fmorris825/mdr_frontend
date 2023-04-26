@@ -42,7 +42,7 @@ const MapsAndNeighborsHoods = ({ handleSelection }) => {
   ) : (
     <div>
       <MorrisDeltaHeader />
-      <MapIFrameCopy />
+      <MapIFrameCopy setSelectedProperty={setSelectedProperty} />
       <PropertyList
         properties={properties}
         setSelectedProperty={setSelectedProperty}

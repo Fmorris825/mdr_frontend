@@ -8,12 +8,17 @@ import {
 import { useState } from "react";
 import "./MapIFrame_copy.css";
 
-const MapIFrameCopy = () => {
+const MapIFrameCopy = ({ selectedProperty, setSelectedProperty }) => {
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: "AIzaSyDVQhEP2okcXMH9fvHlVpWAzbowx5-ZWZs",
     libraries: ["places"],
   });
 
+  function handleClear() {
+    setSelectedProperty("");
+  }
+
+  console.log(selectedProperty);
   if (!isLoaded) return <div>Loading...</div>;
   return (
     <div className="d-flex flex-column">
@@ -32,6 +37,7 @@ const MapIFrameCopy = () => {
         </ul>
       </div>
       <div className="d-flex justify-content-center">
+        {/* <button onClick={handleClear}>Clear Map Search</button> */}
         <Map />;
       </div>
     </div>
@@ -66,12 +72,14 @@ const Map = () => {
   const onPlacesChanged = () => {
     let place = searchBox.getPlaces();
     let placeArray = place["0"].geometry;
+    console.log(placeArray);
     setCenter({
-      lat: placeArray.viewport.Wa.hi,
-      lng: placeArray.viewport.Ia.hi,
+      lat: placeArray.viewport.Ua.lo,
+      lng: placeArray.viewport.Ga.lo,
     });
     console.log(place);
   };
+
   if (!isLoaded) return <div>Loading...</div>;
   return (
     <div className="map">
