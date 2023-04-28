@@ -5,7 +5,7 @@ import { CardImg } from "react-bootstrap";
 const ServicesCard = ({ title, subtitle, text, href, svg }) => {
   return (
     <Card
-      className="text-center m-3 "
+      className="text-center m-3 servicesCard"
       style={{ height: "18rem", width: "16rem" }}
     >
       <Card.Body>
