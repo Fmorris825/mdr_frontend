@@ -1,0 +1,5 @@
+.svg {
+  object-fit: contain;
+  height: 100px;
+  display: flex;
+}

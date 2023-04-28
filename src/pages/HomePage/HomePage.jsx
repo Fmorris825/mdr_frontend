@@ -1,13 +1,14 @@
-import React from "react";
+//util imports//
 import { useEffect, useState } from "react";
 import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
-
 import axios from "axios";
-import Banner from "./HomePageComponents/Banner/Banner";
-import { Image } from "react-bootstrap";
 import { URL_HOST } from "../../urlHost";
+
+//component imports//
+import Banner from "./HomePageComponents/Banner/Banner";
 import PropertySwiper from "../../components/PropertySwiper/PropertySwiper";
+import ServicesRow from "./HomePageComponents/ServicesRow/ServicesRow";
 
 const HomePage = ({
   selectedProperty,
@@ -57,16 +58,16 @@ const HomePage = ({
     setSelectedPhoto(false);
     navigate("/properties");
   }
-
+  console.log(properties);
   return (
-    <div>
+    <>
       <Banner />
-      <div></div>
+      <ServicesRow />
       <PropertySwiper
         properties={properties}
         handleSelection={handleSelection}
       />
-    </div>
+    </>
   );
 };
 
