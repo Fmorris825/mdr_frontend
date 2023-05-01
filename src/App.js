@@ -1,8 +1,10 @@
 // General Imports
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+import axios from "axios";
+import { URL_HOST } from "./urlHost";
 
 // Pages Imports
 import HomePage from "./pages/HomePage/HomePage";
@@ -26,12 +28,27 @@ function App() {
   const [selectedProperty, setSelectedProperty] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(false);
   const [scrollPhotoSelected, setScrollPhotoSelected] = useState(false);
+  const [properties, setProperties] = useState([]);
 
   function handleSelection(property) {
     console.log(property);
     setSelectedProperty(property);
     setScrollPhotoSelected(false);
     setSelectedPhoto(property.photo_url);
+  }
+
+  useEffect(() => {
+    getProperties();
+    console.log(selectedProperty, selectedPhoto);
+  }, []);
+
+  async function getProperties() {
+    try {
+      const response = await axios.get(`${URL_HOST}/api/properties/`);
+      setProperties(response.data);
+    } catch (error) {
+      console.log(error.response.data);
+    }
   }
 
   return (
@@ -71,6 +88,8 @@ function App() {
               handleSelection={handleSelection}
               scrollPhotoSelected={scrollPhotoSelected}
               setScrollPhotoSelected={setScrollPhotoSelected}
+              properties={properties}
+              getProperties={getProperties}
             />
           }
         />

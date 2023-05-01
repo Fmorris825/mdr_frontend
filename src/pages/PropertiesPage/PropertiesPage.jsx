@@ -17,22 +17,22 @@ const PropertiesPage = ({
   handleSelection,
   setScrollPhotoSelected,
   scrollPhotoSelected,
+  properties,
+  getProperties,
 }) => {
-  const [properties, setProperties] = useState([]);
+  // useEffect(() => {
+  //   getProperties();
+  //   console.log(selectedProperty, selectedPhoto);
+  // }, [properties]);
 
-  useEffect(() => {
-    getProperties();
-    console.log(selectedProperty, selectedPhoto);
-  }, []);
-
-  async function getProperties() {
-    try {
-      const response = await axios.get(`${URL_HOST}/api/properties/`);
-      setProperties(response.data);
-    } catch (error) {
-      console.log(error.response.data);
-    }
-  }
+  // async function getProperties() {
+  //   try {
+  //     const response = await axios.get(`${URL_HOST}/api/properties/`);
+  //     setProperties(response.data);
+  //   } catch (error) {
+  //     console.log(error.response.data);
+  //   }
+  // }
 
   // async function getProperties() {
   //   try {
