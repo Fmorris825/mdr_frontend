@@ -21,6 +21,7 @@ import SophiaMorrisPage from "./pages/RealtorsPage/SophiaMorrisPage/SophiaMorris
 import DavidVernonPage from "./pages/RealtorsPage/DavidVernonPage/DavidVernonPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
 import MapsAndNeighborsHoods from "./pages/MapsAndNeighborhoodsPage/MapsAndNeighborhoodsPage";
+import ServicesPage from "./pages/ServicesPage/ServicesPage";
 function App() {
   const [selectedProperty, setSelectedProperty] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState(false);
@@ -50,6 +51,7 @@ function App() {
           }
         />
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/services" element={<ServicesPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/realtors" element={<RealtorsPage />} />
         <Route

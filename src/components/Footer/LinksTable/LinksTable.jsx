@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LinksTable = () => {
   return (
     <div className="">
-      <Table responsive="sm" borderless={true}>
+      <Table responsive="sm" borderless={true} size="sm">
         <thead>
           <tr>
             <th>
