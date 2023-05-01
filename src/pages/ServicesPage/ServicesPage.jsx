@@ -5,7 +5,7 @@ import "./ServicesPage.css";
 
 const ServicesPage = () => {
   return (
-    <div className="d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center back">
       <Card style={{ width: "30rem" }} className="m-3">
         <Card.Img variant="top" src={svg} className="servicesSvg" />
         <Card.Body>

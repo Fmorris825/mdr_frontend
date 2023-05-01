@@ -1,6 +1,5 @@
 //component imports//
 import ServicesCard from "../ServicesCard/ServicesCard";
-import { Row } from "react-bootstrap";
 
 //svg imports//
 import buy from "../ServicesCard/buy.gif";

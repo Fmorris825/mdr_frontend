@@ -2,3 +2,8 @@
   height: 300px;
   object-fit: contain;
 }
+
+.back {
+  width: 100vw;
+  height: 70vh;
+}

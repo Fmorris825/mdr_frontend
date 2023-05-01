@@ -1,12 +1,15 @@
 import Card from "react-bootstrap/Card";
 import "../../HomePage.css";
 import { CardImg } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const ServicesCard = ({ title, subtitle, text, href, svg }) => {
+  const navigate = useNavigate();
   return (
     <Card
       className="text-center m-3 servicesCard grow"
       style={{ height: "24rem", width: "20rem" }}
+      onClick={(event) => navigate("/services")}
     >
       <Card.Body>
         <CardImg className="svg" src={svg} alt="Bootstrap" />
