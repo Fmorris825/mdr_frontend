@@ -40,22 +40,62 @@ const LinksTable = () => {
         </thead>
         <tbody>
           <tr>
-            <td>Personal Home</td>
-            <td>Bank Loans</td>
-            <td>Explore Options</td>
-            <td>Home Estimate</td>
+            <td>
+              <Link className="link" to="services">
+                Personal Home
+              </Link>
+            </td>
+            <td>
+              <Link className="link" to="services">
+                Bank Loans
+              </Link>
+            </td>
+            <td>
+              <Link className="link" to="services">
+                Explore Options
+              </Link>
+            </td>
+            <td>
+              <Link className="link" to="services">
+                Home Estimate
+              </Link>
+            </td>
           </tr>
           <tr>
-            <td>Investment Peoperty</td>
+            <td>
+              <Link className="link" to="services">
+                Investment Property
+              </Link>
+            </td>
             <td></td>
-            <td>Find Agent</td>
-            <td>Inspection</td>
+            <td>
+              <Link className="link" to="services">
+                Find Agent
+              </Link>
+            </td>
+            <td>
+              <Link className="link" to="services">
+                Home inspection
+              </Link>
+            </td>
           </tr>
           <tr>
-            <td>Commercial Real Esate</td>
+            <td>
+              <Link className="link" to="services">
+                Commercial Real Estate
+              </Link>
+            </td>
             <td></td>
-            <td>Post for Sale</td>
-            <td>Cleaning</td>
+            <td>
+              <Link className="link" to="services">
+                Post for Sale
+              </Link>
+            </td>
+            <td>
+              <Link className="link" to="services">
+                Cleaning
+              </Link>
+            </td>
           </tr>
         </tbody>
       </Table>
