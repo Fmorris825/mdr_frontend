@@ -10,6 +10,10 @@ import Banner from "./HomePageComponents/Banner/Banner";
 import PropertySwiper from "../../components/PropertySwiper/PropertySwiper";
 import ServicesRow from "./HomePageComponents/ServicesRow/ServicesRow";
 
+//CSS imports//
+import "./HomePage.css";
+import Footer from "../../components/Footer/Footer";
+
 const HomePage = ({
   selectedProperty,
   selectedPhoto,
@@ -62,11 +66,15 @@ const HomePage = ({
   return (
     <>
       <Banner />
-      <ServicesRow />
-      <PropertySwiper
-        properties={properties}
-        handleSelection={handleSelection}
-      />
+      <div className="row1">
+        <PropertySwiper
+          properties={properties}
+          handleSelection={handleSelection}
+        />
+      </div>
+      <div className="row">
+        <ServicesRow />
+      </div>
     </>
   );
 };

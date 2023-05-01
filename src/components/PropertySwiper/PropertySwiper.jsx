@@ -18,6 +18,10 @@ import SwiperCard from "./SwiperCard";
 const PropertySwiper = ({ properties, handleSelection }) => {
   return (
     <>
+      <div className="d-flex justify-content-center flex-column align-items-center">
+        <h3>Homes you'll love</h3>
+        <p>Located in the Dallas Area</p>
+      </div>
       <Swiper
         slidesPerView={4}
         spaceBetween={20}

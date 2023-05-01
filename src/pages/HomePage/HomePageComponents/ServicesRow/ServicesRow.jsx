@@ -1,39 +1,45 @@
 //component imports//
 import ServicesCard from "../ServicesCard/ServicesCard";
+import { Row } from "react-bootstrap";
 
 //svg imports//
-import house from "../ServicesCard/house-heart.svg";
-import cash from "../ServicesCard/cash.svg";
-import bank from "../ServicesCard/bank.svg";
-import search from "../ServicesCard/search.svg";
+import buy from "../ServicesCard/buy.gif";
+import finance from "../ServicesCard/finance.gif";
+import sale from "../ServicesCard/sale.gif";
+import search from "../ServicesCard/search.gif";
 
 const ServicesRow = () => {
   return (
-    <div className="d-flex justify-content-center">
-      <ServicesCard
-        title="Buy Property"
-        // subtitle="Buy Property"
-        text="Find and purchase property."
-        svg={house}
-      />
-      <ServicesCard
-        title="Sell"
-        // subtitle="Buy Property"
-        text="Sell your property."
-        svg={cash}
-      />
-      <ServicesCard
-        title="Property Loan"
-        // subtitle="Buy Property"
-        text="Get a home loan or investment loan."
-        svg={bank}
-      />
-      <ServicesCard
-        title="Inspect Property"
-        // subtitle="Buy Property"
-        text="Get an inspection for an owned home or new home."
-        svg={search}
-      />
+    <div className="d-flex justify-content-center flex-column align-items-center">
+      <div>
+        <h3>Services</h3>
+      </div>
+      <div className="d-flex">
+        <ServicesCard
+          title="Buy Property"
+          // subtitle="Buy Property"
+          subtitle="Find and purchase property."
+          svg={buy}
+        />
+        <ServicesCard
+          title="Sell"
+          // subtitle="Buy Property"
+          subtitle="Sell your property."
+          svg={sale}
+        />
+        <ServicesCard
+          title="Finance"
+          // subtitle="Buy Property"
+          subtitle="Get a home loan or investment loan."
+          svg={finance}
+        />
+        <ServicesCard
+          title="Inspection"
+          // subtitle="Buy Property"
+          subtitle="Get an inspection for an owned home or new home."
+          svg={search}
+        />
+      </div>
     </div>
   );
 };

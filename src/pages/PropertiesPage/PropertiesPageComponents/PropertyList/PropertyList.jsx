@@ -9,9 +9,9 @@ const PropertyList = ({
   handleSelection,
 }) => {
   return (
-    <Row className="d-flex justify-content-center">
+    <Row className="d-flex justify-content-center m-0">
       {/* <div className="d-flex gap-4 m-3 p-3"> */}
-      <div className="d-flex justify-content-center m-3">
+      <div className="d-flex justify-content-center">
         <h4>Properties on Market and for Rent or Sale</h4>
       </div>
       {properties.map((property, index) => {

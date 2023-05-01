@@ -9,7 +9,7 @@ const PropertyCard = ({
 }) => {
   return (
     <div
-      className="d-flex m-2 propertycards"
+      className="d-flex m-1 propertycards"
       onClick={(event) => handleSelection(property)}
     >
       <div className="d-flex flex-column">

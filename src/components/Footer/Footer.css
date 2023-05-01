@@ -41,3 +41,22 @@
   color: steelblue;
   cursor: pointer;
 }
+
+th {
+  color: whitesmoke;
+  text-align: start;
+}
+
+td {
+  text-decoration: none;
+  color: gray;
+  text-shadow: 2px 2px 4px black;
+  text-align: start;
+  text-indent: 10px;
+  font-size: smaller;
+}
+
+td:hover {
+  color: white;
+  cursor: pointer;
+}

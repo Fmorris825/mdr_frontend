@@ -1,7 +1,6 @@
 .svg {
   object-fit: contain;
-  height: 100px;
-  display: flex;
+  height: 120px;
 }
 
 .servicesCard {
@@ -12,4 +11,33 @@
 .servicesCard:hover {
   box-shadow: 6.7px 6.7px 5.3px #041e4227, 22.3px 22.3px 17.9px #041e4227;
   cursor: pointer;
+}
+
+.cardText {
+  margin-top: 30px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.grow {
+  transition: 1s ease;
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+
+.row1 {
+  margin: 40px 0px;
+}
+
+.row {
+  margin: 90px 0px;
 }
