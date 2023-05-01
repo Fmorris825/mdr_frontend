@@ -116,14 +116,13 @@ const ContactUsForm = ({ handleCloseForm }) => {
               value={email}
             />
             <EmailValidator emailValidator={emailValidator} />
-            <Form.Text className="text-muted">
+            {/* <Form.Text className="text-muted">
               We will not use this email for unwanted promotions and contact,
               only to repsond to your inquiry.
-            </Form.Text>
+            </Form.Text> */}
           </FormGroup>
           <FormGroup>
             <FormLabel>Inquiry:</FormLabel>
-
             <FormControl
               className="shadow-sm p-1 mb-1 bg-body rounded"
               type="text"

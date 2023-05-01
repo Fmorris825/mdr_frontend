@@ -110,8 +110,14 @@ const ContactUsForm = ({ handleCloseForm }) => {
           </FormGroup>
           <FormGroup>
             <FormLabel>Inquiry:</FormLabel>
+            <FormControl
+              className="shadow-sm p-1 mb-1 bg-body rounded"
+              type="text"
+              onChange={(event) => setInquiry(event.target.value)}
+              value={inquiry}
+            />
             <br />
-            <Form.Text className="text-muted">
+            {/* <Form.Text className="text-muted">
               Please Include Property Ref #:
               <br />
               Found at bottom of Property Viewer on Properties Page.
@@ -121,7 +127,7 @@ const ContactUsForm = ({ handleCloseForm }) => {
               type="text"
               onChange={(event) => setInquiry(event.target.value)}
               value={inquiry}
-            />
+            /> */}
           </FormGroup>
         </FormGroup>
         <Container>
