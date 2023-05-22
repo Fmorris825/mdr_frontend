@@ -17,12 +17,13 @@ const MapsAndNeighborsHoods = ({ handleSelection }) => {
   }, []);
 
   async function getProperties() {
-    try {
-      const response = await axios.get(`${URL_HOST}/api/properties/`);
-      setProperties(response.data);
-    } catch (error) {
-      console.log(error.response.data);
-    }
+    // try {
+    //   const response = await axios.get(`${URL_HOST}/api/properties/`);
+    //   setProperties(response.data);
+    // } catch (error) {
+    //   console.log(error.response.data);
+    // }
+    setProperties(Database.properties);
   }
 
   return selectedProperty ? (

@@ -4,6 +4,7 @@ import useAuth from "../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { URL_HOST } from "../../urlHost";
+import Database from "../../Database";
 
 //component imports//
 import Banner from "./HomePageComponents/Banner/Banner";
@@ -49,12 +50,13 @@ const HomePage = ({
   }, []);
 
   async function getProperties() {
-    try {
-      const response = await axios.get(`${URL_HOST}/api/properties/`);
-      setProperties(response.data);
-    } catch (error) {
-      console.log(error.response.data);
-    }
+    // try {
+    //   const response = await axios.get(`${URL_HOST}/api/properties/`);
+    //   setProperties(response.data);
+    // } catch (error) {
+    //   console.log(error.response.data);
+    // }
+    setProperties(Database.properties);
   }
 
   function handleSelection(property) {

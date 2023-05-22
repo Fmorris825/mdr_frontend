@@ -27,10 +27,11 @@ const PropertyViewer = ({
   // }, []);
 
   async function getPhotosForProperties() {
-    const response = await axios.get(
-      `${URL_HOST}/api/properties/${selectedProperty.id}/photos/`
-    );
-    setPhotos(response.data);
+    // const response = await axios.get(
+    //   `${URL_HOST}/api/properties/${selectedProperty.id}/photos/`
+    // );
+    // setPhotos(response.data);
+    setPhotos(Database.photos);
   }
   console.log(selectedPhoto);
   return photos ? (

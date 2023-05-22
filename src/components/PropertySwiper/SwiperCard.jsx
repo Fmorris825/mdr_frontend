@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
 const SwiperCard = ({ property, handleSelection }) => {
+  console.log(property);
   return (
     <Card
       className="swiperCards shadow"
